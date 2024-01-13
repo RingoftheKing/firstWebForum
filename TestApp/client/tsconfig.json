@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es5",                     /* Specify ECMAScript target version */
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,             /* Allow default imports from modules using 'export =' */
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true,
+    "noEmit": true,                   /* Specify JSX code generation: 'react' or 'preserve' */
+    "jsx": "react-jsx",
+    "module": "esnext",                /* Specify module system (e.g., CommonJS) */
+    "strict": true,                      /* Enable all strict type-checking options */
+    "moduleResolution": "node",          /* Specify module resolution strategy */
+    "baseUrl": "./",                     /* Base directory to resolve non-absolute module names */
+  },
+  "include": [
+    "src"
+  ]
+}
