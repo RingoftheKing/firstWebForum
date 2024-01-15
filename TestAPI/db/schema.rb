@@ -28,6 +28,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_10_095421) do
     t.integer "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "tag"
   end
 
   add_foreign_key "comments", "topics"

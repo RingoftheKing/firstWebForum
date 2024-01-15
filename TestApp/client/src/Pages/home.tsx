@@ -1,9 +1,9 @@
 import React from "react";
 
-const Topics: React.FC = () => {
+const Home: React.FC = () => {
     return(
         <h1>HELLO WORLD</h1>
     )
 }
 
-export default Topics;
+export default Home;

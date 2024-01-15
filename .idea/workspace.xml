@@ -5,14 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f091532-8827-4a04-a8f8-e86e8f5f91a4" name="Changes" comment="Created topic.rb and comment.rb. Defined has_many and belongs_to ActiveRecord. Added a basic React scaffold">
-      <change afterPath="$PROJECT_DIR$/TestApp/client/src/Routes.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestApp/client/src/components/TopicDetails.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestApp/client/src/components/TopicList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/firstWebForum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/firstWebForum.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestAPI/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/TestAPI/Gemfile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestAPI/db/migrate/20240115073618_add_tag_to_topics.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestApp/client/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestApp/client/src/Pages/home.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/TestAPI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/TestAPI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestAPI/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/TestAPI/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestAPI/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/TestAPI/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestAPI/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/TestAPI/log/development.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestAPI/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestAPI/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestApp/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestApp/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestApp/client/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestApp/client/src/Pages/TopicAndCommentsView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/client/src/Pages/TopicAndCommentsView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestApp/client/src/Pages/TopicsView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/client/src/Pages/TopicsView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestApp/client/src/Types/Topic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/client/src/Types/Topic.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestApp/client/src/components/TopicList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/client/src/components/TopicList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -54,35 +62,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Rake.db:migrate: TestApp.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/RubyMine.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Rake.db:migrate: TestAPI.executor": "Run",
+    "Rake.db:migrate: TestApp.executor": "Run",
+    "Rake.db:schema:load: TestAPI.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/guoyu/Documents/CompScience/CVWO/firstWebForum",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\RubyMine 2023.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\guoyu\Documents\CompScience\CVWO\firstWebForum\TestApp\client\src" />
       <recent name="$PROJECT_DIR$/TestApp/client/src/components" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="rails generate migration" />
+      <command value="db:migrate" />
       <command value="rake db:migrate" />
+      <command value="rake db:schema:load" />
     </option>
   </component>
-  <component name="RunManager" selected="Rails.TestAPI">
+  <component name="RunManager" selected="Rails.TestApp">
     <configuration name="TestAPI" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="TestAPI" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
@@ -108,7 +123,7 @@
       <method v="2" />
     </configuration>
     <configuration name="TestApp" type="RailsRunConfigurationType" factoryName="Rails">
-      <module name="TestApp" />
+      <module name="firstWebForum" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
@@ -126,9 +141,56 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="RakeRunConfigurationType" factoryName="Rake" nameIsGenerated="true">
+      <module name="firstWebForum" />
+      <predefined_log_file enabled="true" id="RUBY_RAKE" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="DBTESTPASSWORD" value="IH4sRelationF()ne" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="db:migrate: TestAPI" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
+      <module name="TestAPI" />
+      <predefined_log_file enabled="true" id="RUBY_RAKE" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/../../TestAPI" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="development" />
+        <env name="DBTESTPASSWORD" value="IH4sRelationF()ne" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:migrate" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
       <method v="2" />
     </configuration>
     <configuration name="db:migrate: TestApp" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
@@ -150,6 +212,29 @@
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:migrate" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="db:schema:load: TestAPI" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
+      <module name="TestAPI" />
+      <predefined_log_file enabled="true" id="RUBY_RAKE" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/../../TestAPI" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="development" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:schema:load" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
@@ -260,8 +345,22 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Rails.TestAPI" />
+      <item itemvalue="Rails.TestApp" />
+      <item itemvalue="Rake.Unnamed" />
+      <item itemvalue="Rake.spec: TestAPI" />
+      <item itemvalue="Rake.spec: TestApp" />
+      <item itemvalue="Rake.test: TestAPI" />
+      <item itemvalue="Rake.test: TestApp" />
+      <item itemvalue="Rake.db:migrate: TestAPI" />
+      <item itemvalue="Rake.db:migrate: TestApp" />
+      <item itemvalue="Rake.db:schema:load: TestAPI" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Rake.db:schema:load: TestAPI" />
+        <item itemvalue="Rake.db:migrate: TestAPI" />
         <item itemvalue="Rake.db:migrate: TestApp" />
       </list>
     </recent_temporary>
@@ -279,6 +378,8 @@
       <workItem from="1704862512246" duration="2666000" />
       <workItem from="1704880766860" duration="1542000" />
       <workItem from="1704908150885" duration="1076000" />
+      <workItem from="1705303079217" duration="2269000" />
+      <workItem from="1705305668065" duration="2040000" />
     </task>
     <task id="LOCAL-00001" summary="Created topic.rb and comment.rb. Defined has_many and belongs_to ActiveRecord. Added a basic React scaffold">
       <option name="closed" value="true" />
@@ -293,6 +394,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/TestApp/client/src/App.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -315,5 +421,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/firstWebForum@db_migrate__TestApp.rcov" NAME="db:migrate: TestApp Coverage Results" MODIFIED="1704880517550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestApp" MODULE_NAME="TestApp" />
+    <SUITE FILE_PATH="coverage/firstWebForum@db_migrate__TestAPI.rcov" NAME="db:migrate: TestAPI Coverage Results" MODIFIED="1705304193260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestAPI" MODULE_NAME="TestAPI" />
+    <SUITE FILE_PATH="coverage/firstWebForum@db_schema_load__TestAPI.rcov" NAME="db:schema:load: TestAPI Coverage Results" MODIFIED="1705304256756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestAPI" MODULE_NAME="TestAPI" />
   </component>
 </project>
