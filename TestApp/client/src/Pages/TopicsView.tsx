@@ -1,8 +1,14 @@
 import React from "react";
+import TopicList from "../components/TopicList";
 
-const Topics: React.FC = () => {
+const Topics = () => {
     return(
-        <h1>HELLO WORLD</h1>
+        <div>
+            <h1> Amazing Posts </h1>
+            <TopicList></TopicList>
+
+            {/* Create a new post Button */}
+        </div>
     )
 }
 
