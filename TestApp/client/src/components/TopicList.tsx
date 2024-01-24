@@ -1,8 +1,6 @@
+import TopicItem from "./TopicItem";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
 import Topic from "../Types/Topic";
 
 const TopicList = () => {
@@ -24,21 +22,29 @@ const TopicList = () => {
     return (
         <div>
             <h1>Topic List</h1>
-            {topics.map((topic) => (
-                <Card key={topic.id} style={{ marginBottom: '16px' }}>
-                    <CardContent>
-                        <Typography variant="h5" component="div">
-                            {topic.title}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            {topic.content}
-                        </Typography>
-                        {/* You can add more details or fields from your Post model */}
-                    </CardContent>
-                </Card>
+            {topics.map((topicItem) => (
+                <TopicItem topic={topicItem}></TopicItem>
             ))}
         </div>
     );
 };
 
 export default TopicList;
+
+// For Placeholder use before TopicItem is complete.
+
+// import Card from '@mui/material/Card';
+// import CardContent from '@mui/material/CardContent';
+// import Typography from '@mui/material/Typography';
+
+// <Card key={topic.id} style={{ marginBottom: '16px' }}>
+//     <CardContent>
+//         <Typography variant="h5" component="div">
+//             {topic.title}
+//         </Typography>
+//         <Typography variant="body2" color="text.secondary">
+//             {topic.content}
+//         </Typography>
+//         {/* You can add more details or fields from your Post model */}
+//     </CardContent>
+// </Card>

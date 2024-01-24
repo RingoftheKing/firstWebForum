@@ -1,30 +1,27 @@
 /**
- * This Class Specifies how A completed COMMENT will appear,
+ * This Class Specifies how A completed Topic will appear,
  */
 
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Topic from '../Types/Topic'
 import {Card, CardHeader, CardContent,
     Box, IconButton, IconButtonProps, Typography} from '@mui/material'
 import {Favorite} from '@mui/icons-material'
+import {useParams} from "react-router-dom";
 // import {makeStyles} from '@mui/styles' NOW LEGACY
 enum Tags {TECHNICAL = "technical", MEME = "meme", INSPIRATIONAL = "inspiration"
 }
 
-/*
-Stuff such as User Picture, Name, timestamp needs to be fetched from backend
- */
 type Props = {
-    topic: Topic
-    tag: Tags
+    topic : Topic
 }
 
-const TopicItem : React.FC<Props> = ({topic, tag}) => {
+const TopicItem : React.FC<Props> = ({topic}) => {
     return (
         <Card variant={"outlined"}>
             <CardHeader>
                 title = {topic.title}
-                subheader = {tag}
+                subheader = "this is a subheader"
             </CardHeader>
             <CardContent>
                 <Typography>

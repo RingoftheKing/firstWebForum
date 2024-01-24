@@ -5,21 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f091532-8827-4a04-a8f8-e86e8f5f91a4" name="Changes" comment="Created topic.rb and comment.rb. Defined has_many and belongs_to ActiveRecord. Added a basic React scaffold">
-      <change afterPath="$PROJECT_DIR$/TestAPI/db/migrate/20240115073618_add_tag_to_topics.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestApp/client/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestApp/client/src/Pages/home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestAPI/app/controllers/comments_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestAPI/app/controllers/topics_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestAPI/app/helpers/comments_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestAPI/app/helpers/topics_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestAPI/db/migrate/20240114073357_add_tag_to_topics.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestAPI/test/controllers/comments_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestAPI/test/controllers/topics_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestApp/client/src/components/NewTopicButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/firstWebForum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/firstWebForum.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/TestAPI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/TestAPI.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestAPI/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/TestAPI/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestAPI/config/initializers/cors.rb" beforeDir="false" afterPath="$PROJECT_DIR$/TestAPI/config/initializers/cors.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestAPI/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/TestAPI/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestAPI/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/TestAPI/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestAPI/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/TestAPI/log/development.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestAPI/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestAPI/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestApp/client/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestApp/client/src/Pages/TopicAndCommentsView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/client/src/Pages/TopicAndCommentsView.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestApp/client/src/Pages/TopicsView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/client/src/Pages/TopicsView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestApp/client/src/Types/Topic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/client/src/Types/Topic.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestApp/client/src/Types/Comment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/client/src/Types/Comment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestApp/client/src/components/TopicItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/client/src/components/TopicItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestApp/client/src/components/TopicList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/client/src/components/TopicList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="Ruby Class" />
         <option value="TypeScript JSX File" />
       </list>
     </option>
@@ -62,27 +67,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Rake.db:migrate: TestAPI.executor": "Run",
-    "Rake.db:migrate: TestApp.executor": "Run",
-    "Rake.db:schema:load: TestAPI.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/guoyu/Documents/CompScience/CVWO/firstWebForum",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ruby.structure.view.model.defaults.configured": "true",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\RubyMine 2023.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Rails.TestApp.executor&quot;: &quot;Run&quot;,
+    &quot;Rake.db:migrate: TestAPI.executor&quot;: &quot;Run&quot;,
+    &quot;Rake.db:migrate: TestApp.executor&quot;: &quot;Run&quot;,
+    &quot;Rake.db:schema:load: TestAPI.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/guoyu/Documents/CompScience/CVWO/firstWebForum&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/RubyMine.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\guoyu\Documents\CompScience\CVWO\firstWebForum\TestApp\client\src" />
@@ -158,7 +164,11 @@
         <env name="DBTESTPASSWORD" value="IH4sRelationF()ne" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
@@ -182,7 +192,11 @@
         <env name="DBTESTPASSWORD" value="IH4sRelationF()ne" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:migrate" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
@@ -232,7 +246,11 @@
         <env name="RAILS_ENV" value="development" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:schema:load" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
@@ -380,6 +398,10 @@
       <workItem from="1704908150885" duration="1076000" />
       <workItem from="1705303079217" duration="2269000" />
       <workItem from="1705305668065" duration="2040000" />
+      <workItem from="1705338465233" duration="313000" />
+      <workItem from="1705456051601" duration="2982000" />
+      <workItem from="1705544152188" duration="750000" />
+      <workItem from="1705573629439" duration="5733000" />
     </task>
     <task id="LOCAL-00001" summary="Created topic.rb and comment.rb. Defined has_many and belongs_to ActiveRecord. Added a basic React scaffold">
       <option name="closed" value="true" />
